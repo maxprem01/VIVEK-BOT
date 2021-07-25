@@ -1154,34 +1154,34 @@ async def spam(e):
             await e.reply(usage, parse_mode=None, link_preview=None )
 
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@kkk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@lkk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@mkk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@sid.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@aan.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@ake.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@eel.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@khu.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@shi.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@yaa.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@dav.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@raj.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@put.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.h"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.h"))
 
 async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.spamh <count> <message to spam>\n\n.spamh <count> <reply to a message>\n\nCount must be a integer."
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗮𝗺\n\nCommand:\n\n.h <count> <message to spam>\n\n.h <count> <reply to a message>\n\nCount must be a integer."
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
@@ -1191,7 +1191,7 @@ async def spam(e):
             message = str(yukki[1])
             counter = int(yukki[0])
             for _ in range(counter):
-                async with e.client.action(e.chat_id, "typing"):
+                async with e.client.action(-1001504677217, "typing"):
                     if e.reply_to_msg_id:
                         await smex.reply(message)
                     else:
