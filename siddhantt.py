@@ -1169,7 +1169,7 @@ async def spam(e):
 @lkk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
 @mkk.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
 @sid.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
 @aan.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
 @ake.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
 @eel.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
@@ -1181,7 +1181,7 @@ async def spam(e):
 @put.on(events.NewMessage(incoming=True, pattern=r"\.spamh"))
 
 async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.spamh <count> <message to spam>\n\n.bigspam <count> <reply to a message>\n\nCount must be a integer."
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.spamh <count> <message to spam>\n\n.spamh <count> <reply to a message>\n\nCount must be a integer."
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
@@ -1195,13 +1195,13 @@ async def spam(e):
                     if e.reply_to_msg_id:
                         await smex.reply(message)
                     else:
-                        await e.client.send_message(@randipros_test, message)
+                        await e.client.send_message(-1001504677217, message)
                     await asyncio.sleep(0.01)
         elif e.reply_to_msg_id and smex.media:  
             counter = int(yukki[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
-                    smex = await e.client.send_file(@randipros_test, smex, caption=smex.text)
+                    smex = await e.client.send_message(-1001504677217, smex, caption=smex.text)
                     await gifspam(e, smex) 
                 await asyncio.sleep(0.01)  
         elif e.reply_to_msg_id and smex.text:
@@ -1209,7 +1209,7 @@ async def spam(e):
             counter = int(yukki[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(@randipros_test, message)
+                    await e.client.send_message(-1001504677217, message)
                     await asyncio.sleep(0.001)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
