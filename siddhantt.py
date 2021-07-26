@@ -796,181 +796,7 @@ async def gifspam(e, smex):
         pass
 
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@kkk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@lkk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@mkk.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@sid.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@aan.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@ake.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@eel.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@khu.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@shi.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@yaa.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@dav.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@raj.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
-@put.on(events.NewMessage(incoming=True, pattern=r"\.bio"))
 
-async def _(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗼\n\nCommand:\n\n.bio <Message to set Bio of Userbot accounts>"
-    if e.sender_id in SMEX_USERS:
-        yukki = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)     
-        if len(e.text) > 5:
-            bio = str(yukki[0])
-            text = "Changing Bio"
-            event = await e.reply(text, parse_mode=None, link_preview=None )
-            try:
-                await e.client(functions.account.UpdateProfileRequest(about=bio))
-                await event.edit("Succesfully Changed Bio By MULTI SPAMBOT")
-            except Exception as e:
-                await event.edit(str(e))   
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None )
-            
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
-@kkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
-@lkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
-@mkk.on(events.NewMessage(incoming=True, pattern=r"\.join")) 
-@sid.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@aan.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@ake.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@eel.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@khu.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@shi.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@yaa.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@dav.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@raj.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-@put.on(events.NewMessage(incoming=True, pattern=r"\.join"))
-
-async def _(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.join <Public Channel or Group Link/Username>"
-    if e.sender_id in SMEX_USERS:
-        yukki = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(e.text) > 6:
-            bc = yukki[0]
-            text = "Joining..."
-            event = await e.reply(text, parse_mode=None, link_preview=None )
-            try:
-                await e.client(functions.channels.JoinChannelRequest(channel=bc))
-                await event.edit("Succesfully Joined")
-            except Exception as e:
-                await event.edit(str(e))   
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None )
-            
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@kkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@lkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@mkk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@sid.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@aan.on(events.NewMessage(incoming=True, pattern=r"\.pjoin")) 
-@ake.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@eel.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@khu.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@shi.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@yaa.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@dav.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@raj.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-@put.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
-
-
-
-async def _(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.pjoin <Private Channel or Group's access hash>\n\nExample :\nLink = https://t.me/joinchat/HGYs1wvsPUplMmM1\n\n.pjoin HGYs1wvsPUplMmM1"
-    if e.sender_id in SMEX_USERS:
-        yukki = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(e.text) > 7:
-            bc = yukki[0]
-            text = "Joining...."
-            event = await e.reply(text, parse_mode=None, link_preview=None )
-            try:
-                await e.client(ImportChatInviteRequest(bc))
-                await event.edit("Succesfully Joined")
-            except Exception as e:
-                await event.edit(str(e))   
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None )
-            
-        
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@kkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@lkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@mkk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@sid.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@aan.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@ake.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@eel.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@khu.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@shi.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@yaa.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@dav.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@raj.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-@put.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
-
-async def _(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗟𝗲𝗮𝘃𝗲\n\nCommand:\n\n.leave <Channel or Chat ID>"
-    if e.sender_id in SMEX_USERS:
-        yukki = ("".leave(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        if len(e.text) == 7:
-            bc = yukki[0]
-            bc = int(bc)
-            text = "RDX BOT Leaving....."
-            event = await e.reply(text, parse_mode=None, link_preview=None )
-            try:
-                await event.client(LeaveChannelRequest(bc))
-                await event.edit("Succesfully Left")
-            except Exception as e:
-                await event.edit(str(e))   
-        else:
-            await e.reply(usage, parse_mode=None, link_preview=None )
-            
-                
-        
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.traid"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.traid"))
@@ -1069,26 +895,25 @@ async def spam(e):
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-        yukki = ("".join(e.text.split(maxsplit=1)[1: ])).split(2," ", 1)
+        yukki = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
-        if len(yukki) == 3:
+        if len(yukki) == 2:
             message = str(yukki[1])
             counter = int(yukki[0])
-            chat_id = int(yukki[2])
-            if counter > 100000000:
+            if counter > 100000:
                 return await e.reply(error, parse_mode=None, link_preview=None )
             await asyncio.wait([e.respond(message) for i in range(counter)])
         elif e.reply_to_msg_id and smex.media:  
             counter = int(yukki[0])
-            if counter > 100000000:
+            if counter > 100000:
                 return await e.reply(error, parse_mode=None, link_preview=None )
             for _ in range(counter):
-                smex = await e.client.send_file(chat_id, smex, caption=smex.text)
+                smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
                 await gifspam(e, smex)  
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
             counter = int(yukki[0])
-            if counter > 100000000:
+            if counter > 100000:
                 return await e.reply(error, parse_mode=None, link_preview=None )
             await asyncio.wait([e.respond(message) for i in range(counter)])
         else:
@@ -1553,6 +1378,45 @@ async def ping(e):
 
 
         
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.ting"))
+
+async def ping(e):
+    if e.sender_id in SMEX_USERS:
+        start = datetime.now()
+        text = "TONG!"
+        event = await e.client.send_message(-1001149658690, text, parse_mode=None, link_preview=None )
+        end = datetime.now()
+        ms = (end-start).microseconds / 1000
+        await event.edit(f"PING!\n`{ms}` 𝗺𝘀♥︎𝐕𝐈𝐕𝐄-𝐊-𝐇𝐔𝐒𝐇𝐈♥︎")
+
+
+
+        
+
         
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
