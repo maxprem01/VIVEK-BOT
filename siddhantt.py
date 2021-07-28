@@ -842,8 +842,8 @@ async def spam(e):
             for _ in range(counter):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
-                async with e.client.action(-1001282684450, "typing"):
-                    await e.client.send_message(-1001282684450, caption)
+                async with e.client.action(-1001159574737, "typing"):
+                    await e.client.send_message(-1001159574737, caption)
                     await asyncio.sleep(0.1)
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
@@ -855,8 +855,8 @@ async def spam(e):
             for _ in range(counter):
                 reply = random.choice(RAID)
                 caption = f"{username} {reply}"
-                async with e.client.action(-1001149658690, "typing"):
-                    await e.client.send_message(-1001149658690, caption)
+                async with e.client.action(-1001159574737, "typing"):
+                    await e.client.send_message(-1001159574737, caption)
                     await asyncio.sleep(0.1)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
@@ -1083,17 +1083,17 @@ async def spam(e):
             message = str(yukki[1])
             counter = int(yukki[0])
             for _ in range(counter):
-                async with e.client.action(-1001282684450, "typing"):
+                async with e.client.action(-1001159574737, "typing"):
                     if e.reply_to_msg_id:
                         await smex.reply(message)
                     else:
-                        await e.client.send_message(-1001282684450, message)
+                        await e.client.send_message(-1001159574737, message)
                     await asyncio.sleep(0.01)
         elif e.reply_to_msg_id and smex.media:  
             counter = int(yukki[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
-                    smex = await e.client.send_message(-1001282684450, smex, caption=smex.text)
+                    smex = await e.client.send_message(-1001159574737, smex, caption=smex.text)
                     await gifspam(e, smex) 
                 await asyncio.sleep(0.01)  
         elif e.reply_to_msg_id and smex.text:
@@ -1101,7 +1101,7 @@ async def spam(e):
             counter = int(yukki[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(-1001282684450, message)
+                    await e.client.send_message(-1001159574737, message)
                     await asyncio.sleep(0.001)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
@@ -1373,7 +1373,7 @@ async def ping(e):
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"PING!\n`{ms}` 𝗺𝘀❤️ 𝐑𝐘𝐍𝐀+𝐒𝐈𝐃 𝐎𝐏❤️")
+        await event.edit(f"PING!\n`{ms}` 𝗺𝘀❤️ 𝐑𝐄𝐁𝐄𝐋+𝐒𝐈𝐃 𝐎𝐏❤️")
 
 
 
@@ -1408,10 +1408,10 @@ async def ping(e):
     if e.sender_id in SMEX_USERS:
         start = datetime.now()
         text = "TONG!"
-        event = await e.client.send_message(-1001282684450, text, parse_mode=None, link_preview=None )
+        event = await e.client.send_message(-1001159574737, text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"PING!\n`{ms}` 𝗺𝘀 ❤️ 𝐑𝐘𝐍𝐀+𝐒𝐈𝐃 𝐎𝐏❤️")
+        await event.edit(f"PING!\n`{ms}` 𝗺𝘀 ❤️𝐑𝐄𝐁𝐄𝐋 + 𝐒𝐈𝐃 𝐎𝐏❤️")
 
 
 
